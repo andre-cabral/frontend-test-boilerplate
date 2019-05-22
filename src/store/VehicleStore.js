@@ -42,7 +42,8 @@ class VehicleStore {
       modeloLista,
       modeloEscolhidoCodigo,
       anoLista,
-      anoEscolhidoCodigo
+      anoEscolhidoCodigo,
+      valor
     } = initialState;
 
     this.tipoLista = tipoLista;
@@ -53,6 +54,7 @@ class VehicleStore {
     this.modeloEscolhidoCodigo = modeloEscolhidoCodigo;
     this.anoLista = anoLista;
     this.anoEscolhidoCodigo = anoEscolhidoCodigo;
+    this.valor = valor;
   };
 
   setTipo = codigo => {
@@ -109,6 +111,7 @@ export default remotedev(
     modeloEscolhidoCodigo: observable,
     anoLista: observable,
     anoEscolhidoCodigo: observable,
+    valor: observable,
     setInitialState: action,
     setTipo: action,
     setMarca: action,

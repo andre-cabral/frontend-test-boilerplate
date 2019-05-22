@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { ChooseVehicle } from '../../components';
 
 class HomeComponent extends React.Component {
   render() {
-    const { welcome, isFetching, tipoLista } = this.props;
+    const { welcome, isFetching } = this.props;
     console.log('welcome', welcome);
     console.log('carregando', isFetching);
 
@@ -10,9 +11,7 @@ class HomeComponent extends React.Component {
       <React.Fragment>
         <h2>{welcome}</h2>
         {isFetching ? (<p>Carregando</p>) : ''}
-        {tipoLista.map( item => {
-          return <p key={item.codigo}>{item.nome}</p>
-        })}
+        <ChooseVehicle  />
       </React.Fragment>
     );
   }
