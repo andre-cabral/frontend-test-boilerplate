@@ -1,11 +1,11 @@
-import { Home } from "../pages";
+import { Home } from '../pages';
 
 const routes = [
   {
     exact: true,
-    path: "/",
+    path: '/',
     component: Home,
-    key: "home"
+    key: 'home'
   }
 ];
 

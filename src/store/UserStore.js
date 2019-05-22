@@ -1,10 +1,10 @@
 // @flow
 
-import { action, observable, computed, decorate } from "mobx";
-import remotedev from "mobx-remotedev";
+import { action, observable, computed, decorate } from 'mobx';
+import remotedev from 'mobx-remotedev';
 
 const _defaultInitialState = {
-  welcome: "Bem vindo ao teste de frontend mobiauto :)"
+  welcome: 'Bem vindo ao teste de frontend mobiauto :)'
 };
 
 class UserStore {
@@ -16,7 +16,7 @@ class UserStore {
     const { welcome } = initialState;
 
     this.welcome = welcome;
-  };
+  }
 }
 
 export default remotedev(

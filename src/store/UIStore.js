@@ -1,5 +1,5 @@
-import { action, observable, decorate } from 'mobx'
-import remotedev from 'mobx-remotedev'
+import { action, observable, decorate } from 'mobx';
+import remotedev from 'mobx-remotedev';
 
 const _defaultInitialState = {
   isFetching: false,
@@ -7,17 +7,17 @@ const _defaultInitialState = {
 
 class UIStore {
   constructor(initialState) {
-    this.setInitialState(initialState || _defaultInitialState)
+    this.setInitialState(initialState || _defaultInitialState);
   }
 
   setInitialState = initialState => {
-    const { isFetching } = initialState
+    const { isFetching } = initialState;
 
-    this.isFetching = isFetching
+    this.isFetching = isFetching;
   }
 
   setIsFetching = isFetching => {
-    this.isFetching = isFetching
+    this.isFetching = isFetching;
   }
 }
 
@@ -27,4 +27,4 @@ export default remotedev(
     setInitialState: action,
     setIsFetching: action,
   })
-)
+);
