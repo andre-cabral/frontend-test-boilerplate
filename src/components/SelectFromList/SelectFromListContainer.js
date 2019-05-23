@@ -8,13 +8,15 @@ class SelectFromListContainer extends React.Component {
       id = '',
       list = [],
       label = '',
-      defaultOption = ''
+      defaultOption = '',
+      onChange = (codigo) => {}
     } = this.props;
     const viewComponentProps = {
       id,
       list,
       label,
-      defaultOption
+      defaultOption,
+      onChange
     };
 
     return <ViewComponent {...viewComponentProps} />;

@@ -6,11 +6,13 @@ class HomeContainer extends React.Component {
     const {
       userStore: { welcome },
       uiStore: {isFetching},
+      vehicleStore,
       vehicleStore: {tipoLista}
     } = this.props;
     const viewComponentProps = {
       welcome,
       isFetching,
+      vehicleStore,
       tipoLista
     };
 
