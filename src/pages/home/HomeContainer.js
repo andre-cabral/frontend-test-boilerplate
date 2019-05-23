@@ -5,15 +5,11 @@ class HomeContainer extends React.Component {
     const ViewComponent = this.props.viewComponent;
     const {
       userStore: { welcome },
-      uiStore: {isFetching},
-      vehicleStore,
-      vehicleStore: {tipoLista}
+      uiStore: {isFetching}
     } = this.props;
     const viewComponentProps = {
       welcome,
-      isFetching,
-      vehicleStore,
-      tipoLista
+      isFetching
     };
 
     return <ViewComponent {...viewComponentProps} />;

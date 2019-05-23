@@ -186,12 +186,12 @@ class VehicleStore {
       setIsFetching(false);
     });
   }
-  setAno = (codigo, setIsFetching = value => {}) => {
+  setAno = (codigo, setIsFetching = value => {}, setShowVehicleList = value => {}) => {
     this.anoEscolhidoCodigo = codigo;
 
     this.resetValor();
 
-    this.fetchValor(setIsFetching);
+    this.fetchValor(setIsFetching, setShowVehicleList);
   }
   setAnoLista = anoLista => {
     this.anoLista = anoLista;
@@ -203,7 +203,7 @@ class VehicleStore {
     this.anoEscolhidoCodigo = anoEscolhidoCodigo;
   }
 
-  fetchValor = (setIsFetching = value => {}) => {
+  fetchValor = (setIsFetching = value => {}, setShowVehicleList = value => {} ) => {
     const that = this;
     setIsFetching(true);
 
@@ -218,6 +218,7 @@ class VehicleStore {
         // API response ok        
         response.json().then(function(json) {
           that.setValor(json);
+          setShowVehicleList(false);
         });
 
         setIsFetching(false);

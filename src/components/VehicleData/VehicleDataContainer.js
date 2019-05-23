@@ -4,11 +4,11 @@ class VehicleDataContainer extends React.Component {
   render() {
     const ViewComponent = this.props.viewComponent;
     const {
-      uiStore: {isFetching, setIsFetching},
+      uiStore: { showVehicleList },
       vehicleStore: { valor }
     } = this.props;
     const viewComponentProps = {
-      isFetching,
+      showVehicleList,
       valor
     };
 

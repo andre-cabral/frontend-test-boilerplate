@@ -1,0 +1,11 @@
+.vehicle-data{
+  &__line{
+    background: rgb(151, 174, 179);
+    margin: 0;
+    padding: 5px;
+
+    &--odd{
+      background: rgb(137, 114, 143);
+    }
+  }
+}

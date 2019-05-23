@@ -1,7 +1,34 @@
+$break-small: 410px;
+
 @import './components/ChooseVehicle/ChooseVehicleStyle.scss';
 @import './components/Loading/LoadingStyle.scss';
 @import './components/VehicleData/VehicleDataStyle.scss';
 
+
+.home-container{
+  width: 400px;
+
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+}
+
 h1, h2 {
-  color: #ccc;
+  color: #212121;
+}
+
+.hide{
+  display: none;
+}
+
+.hide-small{
+  @media screen and (max-width: $break-small) {
+    display: none;
+  }
+}
+
+.hide-big{
+  @media screen and (min-width: $break-small + 1) {
+    display: none;
+  }
 }

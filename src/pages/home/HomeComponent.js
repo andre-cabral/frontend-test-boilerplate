@@ -3,8 +3,7 @@ import { ChooseVehicle, VehicleData, Loading } from '../../components';
 
 class HomeComponent extends React.Component {
   render() {
-    const { welcome, isFetching, vehicleStore } = this.props;
-    console.log(vehicleStore)
+    const { welcome, isFetching } = this.props;
 
     return (
       <React.Fragment>

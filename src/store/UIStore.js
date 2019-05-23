@@ -3,6 +3,7 @@ import remotedev from 'mobx-remotedev';
 
 const _defaultInitialState = {
   isFetching: false,
+  showVehicleList: true
 }
 
 class UIStore {
@@ -11,20 +12,28 @@ class UIStore {
   }
 
   setInitialState = initialState => {
-    const { isFetching } = initialState;
-
+    const { isFetching, showVehicleList } = initialState;
+    
     this.isFetching = isFetching;
+    this.showVehicleList = showVehicleList;
+    
   }
 
   setIsFetching = isFetching => {
     this.isFetching = isFetching;
+  }
+
+  setShowVehicleList = showVehicleList => {
+    this.showVehicleList = showVehicleList;
   }
 }
 
 export default remotedev(
   decorate(UIStore, {
     isFetching: observable,
+    showVehicleList: observable,
     setInitialState: action,
     setIsFetching: action,
+    setShowVehicleList: action
   })
 );
