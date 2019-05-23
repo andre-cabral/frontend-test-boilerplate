@@ -64,6 +64,7 @@ class VehicleStore {
     this.resetMarca();
     this.resetModelo();
     this.resetAno();
+    this.resetValor();
 
     this.fetchMarca(setIsFetching);
   }
@@ -99,6 +100,7 @@ class VehicleStore {
 
     this.resetModelo();
     this.resetAno();
+    this.resetValor();
 
     this.fetchModelo(setIsFetching);
   }
@@ -143,6 +145,7 @@ class VehicleStore {
     this.modeloEscolhidoCodigo = codigo;
 
     this.resetAno();
+    this.resetValor();
 
     this.fetchAno(setIsFetching);
   }
@@ -186,6 +189,8 @@ class VehicleStore {
   setAno = (codigo, setIsFetching = value => {}) => {
     this.anoEscolhidoCodigo = codigo;
 
+    this.resetValor();
+
     this.fetchValor(setIsFetching);
   }
   setAnoLista = anoLista => {
@@ -227,6 +232,11 @@ class VehicleStore {
   setValor = valor => {
     this.valor = valor;
   }
+  resetValor = () => {
+    const { valor } = _defaultInitialState;
+
+    this.valor = valor;
+  }
 }
 
 export default remotedev(
@@ -248,6 +258,7 @@ export default remotedev(
     setModeloLista: action,
     setAno: action,
     setAnoLista: action,
-    setValor: action
+    setValor: action,
+    resetValor: action
   })
 );

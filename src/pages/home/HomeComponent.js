@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChooseVehicle } from '../../components';
+import { ChooseVehicle, VehicleData } from '../../components';
 
 class HomeComponent extends React.Component {
   render() {
@@ -11,6 +11,7 @@ class HomeComponent extends React.Component {
         <h2>{welcome}</h2>
         {isFetching ? (<p>Carregando</p>) : ''}
         <ChooseVehicle  />
+        <VehicleData />
       </React.Fragment>
     );
   }
