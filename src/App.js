@@ -3,6 +3,8 @@ import { Provider } from 'mobx-react';
 import store from '../src/store';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import routes from '../src/config/routes';
+import "./App.scss";
+
 class App extends Component {
   render() {
     return (

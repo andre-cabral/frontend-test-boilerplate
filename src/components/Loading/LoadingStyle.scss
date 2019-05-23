@@ -1,0 +1,24 @@
+.loading{
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &__spinner{
+    margin: 50px;
+    height: 28px;
+    width: 28px;
+    animation: loading__spinner 0.8s infinite linear;
+    border: 8px solid #999;
+    border-right-color: transparent;
+    border-radius: 50%;
+  }
+}
+
+
+@keyframes loading__spinner {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
